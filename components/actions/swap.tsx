@@ -13,10 +13,10 @@ export type SwapType = {
 
 export default function Swap(message: SwapType) {
 	return (
-		<div className='px-4 py-2 rounded bg-gray-50 shadow'>
+		<div className='px-4 py-2 rounded bg-gray-700 shadow'>
 			{" "}
 			{/* Light background with subtle shadow */}
-			<b className='text-gray-800'>
+			<b className='text-white'>
 				{" "}
 				{/* Dark text for contrast */}Are you trying to start a token swap?
 			</b>

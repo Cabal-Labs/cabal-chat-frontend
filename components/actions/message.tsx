@@ -6,10 +6,10 @@ export type MessageType = {
 export default function Message(message: MessageType) {
 	return (
 		<div
-			className={`max-w-md px-4 py-2 rounded ${
+			className={`max-w-md px-4 py-2 rounded text-white ${
 				message.type === "sent"
-					? "self-end bg-blue-100"
-					: "self-start bg-gray-100"
+					? "self-end bg-blue-700"
+					: "self-start bg-gray-700"
 			}`}
 		>
 			{message.text}

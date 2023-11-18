@@ -1,12 +1,41 @@
 "use client";
-import Chat from "@/components/chat";
+import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 
-export default function Home() {
+export default function Login() {
+	const router = useRouter();
+
 	return (
-		<main>
+		<>
 			<Header />
-			<Chat />
-		</main>
+			<main className='flex flex-col items-center justify-center min-h-screen bg-gray-700'>
+				<div className='text-center'>
+					<h1 className='text-6xl font-bold text-white'>
+						Welcome to Cabal Chat!
+					</h1>
+					<p className='mt-4 text-xl text-gray-300'>
+						Where Web3 is as simple as texting a friend
+					</p>
+					{/* Dummy form for illustration */}
+
+					<button
+						onClick={() => router.push("/connect")}
+						className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-1'
+					>
+						Log In
+					</button>
+
+					<p className='text-gray-400'>
+						{"Don't have an account?"}
+						<button
+							onClick={() => router.push("/connect")}
+							className='mt-2 text-white  py-2 px-4 rounded-lg mr-1'
+						>
+							<p className='text-blue-500 hover:underline'>Sign up here</p>
+						</button>
+					</p>
+				</div>
+			</main>
+		</>
 	);
 }

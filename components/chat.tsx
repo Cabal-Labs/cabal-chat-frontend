@@ -100,7 +100,7 @@ const Chat = () => {
 	];
 
 	return (
-		<div className='max-w-lg mx-auto shadow-lg  bg-white'>
+		<div className='max-w-lg mx-auto shadow-lg  bg-gray-800'>
 			<div className='flex flex-col space-y-2 p-4'>
 				{messages.map((message, index) => {
 					// REGULAR MESSAGES
@@ -129,13 +129,13 @@ const Chat = () => {
 					);
 				})}
 			</div>
-			<div className='flex justify-center w-full p-4 items-center sticky bottom-0 z-50 bg-white'>
+			<div className='flex justify-center w-full p-4 items-center sticky bottom-0 z-50 bg-gray-700'>
 				<input
 					type='text'
 					value={inputValue}
 					onChange={handleInputChange}
 					placeholder={placeholders[placeholderIndex]}
-					className='p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full'
+					className='p-2 border bg-gray-600	 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full'
 				/>
 				<button
 					onClick={handleSubmit}
@@ -145,7 +145,7 @@ const Chat = () => {
 				</button>
 				<button
 					onClick={scrollToTop}
-					className='fixed bottom-4 right-4 bg-transparent border-0 cursor-pointer'
+					className='fixed bottom-4 right-4 bg-transparent border-0 cursor-pointer text-white'
 					title='Scroll to top'
 				>
 					<FontAwesomeIcon icon={faArrowUp} /> Scroll to top

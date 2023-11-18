@@ -2,9 +2,12 @@
 import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 import SafeConnect from "@/components/safeConnect";
+import { useContext } from "react";
+import { Context } from "@/providers/provider";
 
 export default function Login() {
 	const router = useRouter();
+	const { userId } = useContext(Context);
 
 	return (
 		<>
@@ -17,9 +20,10 @@ export default function Login() {
 					<p className='mt-4 text-xl text-gray-300'>
 						Where Web3 is as simple as texting a friend
 					</p>
+					{userId}
 					{/* Dummy form for illustration */}
 
-					<SafeConnect/>
+					<SafeConnect />
 
 					<p className='text-gray-400'>
 						{"Don't have an account?"}

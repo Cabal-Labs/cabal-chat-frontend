@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Header from "@/components/header";
+import SafeConnect from "@/components/safeConnect";
 
 export default function Login() {
 	const router = useRouter();
@@ -18,12 +19,7 @@ export default function Login() {
 					</p>
 					{/* Dummy form for illustration */}
 
-					<button
-						onClick={() => router.push("/connect")}
-						className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-1'
-					>
-						Log In
-					</button>
+					<SafeConnect/>
 
 					<p className='text-gray-400'>
 						{"Don't have an account?"}
